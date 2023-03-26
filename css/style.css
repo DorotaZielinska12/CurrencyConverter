@@ -10,12 +10,20 @@ html {
 
 body {
     font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("../image/th\ \(1\).jpg");
+
 }
 
 .container {
-    max-width: 700px;
-    margin: 0 auto;
-    background-image: url("../image/th\ \(1\).jpg");
+    flex-basis: 700px;
+    margin: 20px;
+    padding: 30px;
+    background: #d4d2d2;
+    border-radius: 20px;
 }
 
 .form__labelText {
