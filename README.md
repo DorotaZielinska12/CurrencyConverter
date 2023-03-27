@@ -1,7 +1,9 @@
 # Currency Converter
 
 ## Demo
+
 https://dorotazielinska12.github.io/CurrencyConverter/
+
 ![](image/image.jpg)
 
 Description
