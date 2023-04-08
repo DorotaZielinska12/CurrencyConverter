@@ -1,33 +1,34 @@
 {
     const calculateResult = (amount, currency) => {
-        const currencyEUR = 0.2123;
-        const currencyUSD = 0.2290;
-        const currencyGBP = 0.1886;
+        const rateEUR = 4.6850;
+        const rateUSD = 4.6850;
+        const rateGBP = 5.5447;
 
         switch (currency) {
             case "EUR":
-                return amount * currencyEUR;
+                return amount / rateEUR;
 
             case "USD":
-                return amount * currencyUSD;
+                return amount / rateUSD;
 
             case "GBP":
-                return amount * currencyGBP;
-
+                return amount / rateGBP;
         }
     };
 
-    const updateResultText = (amound, result, currency) => {
+    const updateResultText = (amount, result, currency) => {
         const resultElement = document.querySelector(".js-result");
-        resultElement.value = result.toFixed(2);
+        resultElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>
+        ${result.toFixed(2)} ${currency}</stron>`;
     }
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+
         const amountElement = document.querySelector(".js-amount");
         const currencyRateElement = document.querySelector(".js-currency");
 
-        const amount = amountElement.value;
+        const amount = +amountElement.value;
         const currency = currencyRateElement.value;
 
         const result = calculateResult(amount, currency);
